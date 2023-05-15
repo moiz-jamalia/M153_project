@@ -25,5 +25,10 @@ namespace M153_Project_Olma_Moiz_Jamalia.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public void GetQuestions()
+        {
+            String query = null; 
+        }
     }
 }
