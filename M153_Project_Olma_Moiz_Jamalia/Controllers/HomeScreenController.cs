@@ -2,10 +2,13 @@
 using M153_Project_Olma_Moiz_Jamalia.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
+
 
 namespace M153_Project_Olma_Moiz_Jamalia.Controllers
 {
-    public class HomeScreenController : Controller
+   public class HomeScreenController : Controller
     {
         private readonly IWebHostEnvironment env;
         private readonly AppDbContext context;
@@ -14,6 +17,11 @@ namespace M153_Project_Olma_Moiz_Jamalia.Controllers
             this.env = env;
             this.context = context;
         }
+
+        [BindProperty]
+        public UserStore UserStore { get; set; }
+
+        public void OnGet() { }
 
         public IActionResult Home()
         {
@@ -25,10 +33,14 @@ namespace M153_Project_Olma_Moiz_Jamalia.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-        public void GetQuestions()
+        
+        private byte[] ImgaeToByteArray(Image image)
         {
-            String query = null; 
+            using (var stream = new MemoryStream())
+            {
+                image.Save(stream, ImageFormat.Jpeg);
+                return stream.ToArray();
+            }
         }
     }
 }
