@@ -15,6 +15,9 @@ namespace M153_Project_Olma_Moiz_Jamalia.Models
         public string? PhoneNr { get; set; }
         public string? PostCode { get; set; }
         public string? City { get; set; }
-        public string? Country { get; set; }
+        public string? Street { get; set; }
+        public int? StreetNr { get; set; }
+        public byte[]? Image { get; set; }
+        public bool? CorrectAnswer { get; set; }
     }
 }
