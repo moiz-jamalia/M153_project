@@ -18,14 +18,28 @@
         </form>
     </div>
 
-    <div class="container-content">
-        <!--<img src="../assets/Logo-M153.svg" alt="" width="150" class="picture">-->
+    <div id="camera-container" class="container-content">
+        <!--<img src="" alt="logo" width="150" class="picture">-->
         <h1>test</h1>
         <br>
-        <div id="camera" />
+        <div id="camera"></div>
     </div>
-    <div>
-        <a><input type="button" value="Take a Picture" /></a>
+    <button id="capture-btn" type="button" name="CapturePicture">Take a Picture</button>
+    <!--<a><input id="capture-btn" type="button" value="Take a Picture" /></a>-->
+    <div id="form-container" class="container-content" style="display: none;">
+        <form>
+            <!-- Add your form elements here -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <input type="hidden" id="ImageData" name="ImageData" value="">
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
+    <img id="captured-image" alt="Captured Image" style="display: none;">
 </body>
 </html>

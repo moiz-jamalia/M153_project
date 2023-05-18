@@ -9,8 +9,14 @@
     var camera = document.getElementById("camera");
 
     if (camera) Webcam.attach(camera);
-})
 
-document.addEventListener('CaptureImage', function () {
-    
-})
+    document.getElementById('capture-btn').addEventListener('click', function () {
+        Webcam.snap(function (data_uri) {
+            document.getElementById('camera-container').style.display = 'none';
+            document.getElementById('form-container').style.display = '';
+            document.getElementById('captured-image').style.display = '';
+            document.getElementById('captured-image').src = data_uri;
+            document.getElementById('ImageData').value = data_uri;
+        });
+    });
+});
