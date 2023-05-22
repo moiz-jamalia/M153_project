@@ -5,9 +5,9 @@ namespace M153_Project_Olma_Moiz_Jamalia.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<UserStore> UserStores { get; set; }
+        public DbSet<User> UserStores { get; set; }
 
-        public DbSet<AdminStore> AdminStores { get; set; }
+        public DbSet<Admin> AdminStores { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

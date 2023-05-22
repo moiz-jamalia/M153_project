@@ -5,45 +5,29 @@
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-    <title>Olma | Home</title>
     <link rel="stylesheet" href="~/css/styles.css">
+    <script src="~/WebCamjs/webcam.js"></script>
+    <script src="~/js/CamScript.js"></script>
+    <title>Olma | Home</title>
 </head>
 <body id="home_body">
     <div class="nav">
         <form>
-            <a id="loginButton" href="@Url.Action("AdminLogin", "AdminLogin")"><input type="button" name="Login" value="Admin Anmeldung" class="button"></a>
-            <a id="prizeScreenButton"><input type="button" name="Login" value="Preisliste" class="button"></a>
+            <a id="loginButton" href="@Url.Action("AdminLogin", "AdminLogin")"><input type="button" name="Login" value="Admin Login" class="button-33"></a>
+            <a id="prizeScreenButton"><input type="button" name="Login" value="Price List" class="button-33"></a>
         </form>
     </div>
 
-    <div class="container-content">
-        <!--<img src="../assets/Logo-M153.svg" alt="" width="150" class="picture">-->
-        <h1>test</h1>
+    <div id="camera-container" class="container-content">
+        <!--<img src="" alt="logo" width="150" class="picture">-->
+        <h1>Take a Selfie</h1>
         <br>
-
-        <form action="home.php" method="post" id="questions">
-            <table class="center">
-                <tr>
-                    <td><label for="lblAnswer1" class=""></label></td>
-                    <td><input type="radio" id="RaAnswer1" name="answer" checked="checked"></td>
-                </tr>
-                <tr>
-                    <td><label for="lblAnswer1" class=""></label></td>
-                    <td><input type="radio" id="RaAnswer2" name="answer"></td>
-                </tr>
-                <tr>
-                    <td><label for="lblAnswer1" class=""></label></td>
-                    <td><input type="radio" id="RaAnswer3" name="answer"></td>
-                </tr>
-                <tr>
-                    <td><label for="lblAnswer1" class=""></label></td>
-                    <td><input type="radio" id="RaAnswer4" name="answer"></td>
-                </tr>
-                <tr>
-                    <td><button type="submit" class="center, button-submit">Bestätigen</button></td>
-                </tr>
-            </table>
-        </form>
+        <div id="camera"></div>
     </div>
+    <button id="capture-btn" type="button" name="CapturePicture" class="centered-button-33">Take a Picture</button>
+    <div id="form-container" class="container-content" style="display: none;">
+        @Html.Partial("CreateUser", new M153_Project_Olma_Moiz_Jamalia.Models.User())
+    </div>
+    <img id="captured-image" name="captured" alt="Captured Image" style="display: none;">
 </body>
 </html>
