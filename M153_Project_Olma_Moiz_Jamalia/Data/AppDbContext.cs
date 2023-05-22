@@ -9,6 +9,8 @@ namespace M153_Project_Olma_Moiz_Jamalia.Data
 
         public DbSet<Admin> AdminStores { get; set; }
 
+        public DbSet<Prize> PrizeStores { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)

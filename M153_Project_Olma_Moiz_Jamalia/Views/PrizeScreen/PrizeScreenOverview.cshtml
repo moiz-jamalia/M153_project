@@ -1,0 +1,40 @@
+﻿@model List<Prize>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Olma | Prices</title>
+        <link rel="stylesheet" href="~/css/styles.css">
+    </head>
+    <body>
+        <div class="nav">
+            <a id="Home" href="@Url.Action("Home", "HomeScreen")"><input type="button" name="Home" value="Back to Home" class="button-33"></a>
+        </div>
+        <div>
+            <h1>Prizes</h1>
+            <section>
+                <br />
+                <table id="prizeList">
+                    <thead>
+                        <th>Name</th>
+                        <th>Worth</th>
+                        <th>Amount</th>
+                    </thead>
+                    <tbody>
+                        @foreach(var prize in Model)
+                        {
+                            <tr>
+                                <td>@prize.Name</td>
+                                <td>@(prize.Worth + " " + prize.Currency)</td>
+                                <td>@prize.Amount</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>
