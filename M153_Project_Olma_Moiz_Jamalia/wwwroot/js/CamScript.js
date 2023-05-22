@@ -23,7 +23,7 @@
             cameraContainer.style.display = 'none';
             capturedImage.style.display = 'block';
             formContainer.style.display = 'block';
-            localStorage.setItem('ImageData', dataUri);
+            imageDataInput.value = dataUri;
         });
     });
 });

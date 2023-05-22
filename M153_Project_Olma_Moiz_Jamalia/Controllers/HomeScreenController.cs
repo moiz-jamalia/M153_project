@@ -18,12 +18,19 @@ namespace M153_Project_Olma_Moiz_Jamalia.Controllers
             return View();
         }
 
+        public ActionResult CreateUser()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateUser(User user)
+        public IActionResult CreateUser(User user, string imageData)
         {
             if (!ModelState.IsValid)
             {
+                if (!string.IsNullOrEmpty(imageData)) user.Image = Convert.FromBase64String(imageData.Split(",")[1]);
+                
                 context.UserStores.Add(user);
                 context.SaveChanges();
 
