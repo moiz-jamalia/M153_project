@@ -3,8 +3,6 @@
   font-family: 'Century Gothic'
 }
 
- 
-
 .center {
   margin: auto;
   width: 50%;
@@ -22,8 +20,6 @@
   border-radius: 20px;
 }
 
- 
-
 .form_register > label {
   grid-column: labels;
   grid-row: auto;
@@ -37,7 +33,6 @@
   border: none;
   padding: 1em;
 }
-
 
 .container-content {
   margin: auto;
@@ -86,13 +81,9 @@
   margin: 0px 10px 0px;
 }
 
- 
-
 h1 {
   font-family: 'Century Gothic'
 }
-
- 
 
 .button-33:active,
 .button-33:hover {
