@@ -15,7 +15,8 @@
 
         <div>
             <h1>Admin-Login</h1>
-            <form>
+            <form action="@Url.Action("ValidateUser")" method="post">
+                @Html.AntiForgeryToken()
                 <label>Username: </label>
                 <input type="text" name="username" />
                 <br />

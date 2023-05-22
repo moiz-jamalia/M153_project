@@ -1,5 +1,56 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<User>
 @{
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Olma | registered User</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="~/css/styles.css">
+    </head>
+
+    <body>
+        <section>
+            <div>
+                <div>
+                    <h1>registered User</h1>
+                </div>
+
+                <div>
+                    <div>
+                        <div>
+                            <table id="userTable">
+                                <thead>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Date of Birth</th>
+                                    <th>E-Mail</th>
+                                    <th>Tel.</th>
+                                    <th>Address</th>
+                                    <th>Selfie</th>
+                                </thead>
+                                <tbody>
+                                    @foreach (var user in Model)
+                                    {
+                                        <tr>
+                                            <td>@user.FirstName</td>
+                                            <td>@user.LastName</td>
+                                            <td>@user.BirthDate</td>
+                                            <td>@user.EMail</td>
+                                            <td>@user.PhoneNr</td>
+                                            <td>@(user.Street + " " + user.StreetNr + ", " + user.PostCode + " " + user.City)</td>
+                                            <td><img src="data:image/jpeg;base64,@Convert.ToBase64String(user.Image)" alt="Selfie" /></td>
+                                        </tr>
+                                    }
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

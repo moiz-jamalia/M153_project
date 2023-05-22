@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS user
     city NVARCHAR(255) NOT NULL,
     street NVARCHAR(255) NOT NULL,
     streetNr INT NOT NULL,
-    image LONGBLOB,
+    image LONGBLOB NOT NULL,
     correctAnswer BIT NOT NULL
 );
 
