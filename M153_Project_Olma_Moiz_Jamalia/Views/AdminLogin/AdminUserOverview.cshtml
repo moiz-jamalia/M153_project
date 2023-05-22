@@ -19,7 +19,7 @@
                     <h1>registered User</h1>
                 </div>
 
-                <div>
+                <div class="center_table">
                     <div>
                         <div>
                             <table id="userTable">
@@ -42,7 +42,7 @@
                                             <td>@user.EMail</td>
                                             <td>@user.PhoneNr</td>
                                             <td>@(user.Street + " " + user.StreetNr + ", " + user.PostCode + " " + user.City)</td>
-                                            <td><img src="data:image/jpeg;base64,@Convert.ToBase64String(user.Image)" alt="Selfie" /></td>
+                                            <td><img src="data:image/jpeg;base64,@Convert.ToBase64String(user.Image)" alt="Selfie" width="300px" /></td>
                                         </tr>
                                     }
                             </tbody>

@@ -13,7 +13,7 @@
            <a id="loginButton" href="@Url.Action("Home", "HomeScreen")"><input type="button" name="Home" value="Back to Home" class="button-33"></a>
         </div>
 
-        <div>
+        <div class="center_adlog">
             <h1>Admin-Login</h1>
             <form action="@Url.Action("ValidateUser")" method="post">
                 @Html.AntiForgeryToken()

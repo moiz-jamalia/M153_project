@@ -123,3 +123,37 @@ h1 {
   width: 50%;
   padding: 10px;
 }
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: black;
+}
+
+.center_table {
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.center_adlog {
+    margin: auto;
+    width: 50%;
+    margin-left: 44%;
+}
+
