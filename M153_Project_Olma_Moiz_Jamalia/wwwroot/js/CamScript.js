@@ -23,29 +23,7 @@
             cameraContainer.style.display = 'none';
             capturedImage.style.display = 'block';
             formContainer.style.display = 'block';
-
-            const formData = new FormData();
-
-            const blob = dataURItoBlob(dataUri);
-            formData.append('ImageData', blob);
-
-            const firstNameInput = document.getElementById('firstName');
-            const lastNameInput = document.getElementById('lastName');
-
-            formData.append('FirstName', firstNameInput.value);
-            formData.append('LastName', lastNameInput.value);
-
-            fetch('@Url.Action("CreateUser", "HomeScreenController")', {
-                method: 'POST',
-                body: formData
-            }).then(response => {
-
-                if (response.ok) console.log('User created successfully');
-                else console.error('Failed to create user');
-
-            }).catch(error => {
-                console.error('An error occurred:', error);
-            });
+            localStorage.setItem('ImageData', dataUri);
         });
     });
 });

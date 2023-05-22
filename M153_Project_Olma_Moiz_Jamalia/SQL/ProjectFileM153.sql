@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS user
     city NVARCHAR(255) NOT NULL,
     street NVARCHAR(255) NOT NULL,
     streetNr INT NOT NULL,
-    image LONGBLOB NOT NULL,
+    image LONGBLOB,
     correctAnswer BIT NOT NULL
 );
 
@@ -63,6 +63,7 @@ DROP TABLE IF EXISTS admin;
 CREATE TABLE IF NOT EXISTS  admin
 (
     adminID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    usernameAdmin NVARCHAR(100) NOT NULL,
     password NVARCHAR(50) NOT NULL
 );
 
@@ -128,4 +129,4 @@ INSERT INTO prize(name, amount, worth) VALUES
 -- Insert data into table admin
 -- ------------------------------------------------------
 
-INSERT INTO admin (adminID, password) VALUES (1, 'D?4PZ=Yq^_2zegmX');
+INSERT INTO admin (adminID, usernameAdmin, password) VALUES (1, 'olma_admin' ,'D?4PZ=Yq^_2zegmX');

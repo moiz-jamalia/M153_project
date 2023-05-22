@@ -8,8 +8,11 @@
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-    <script src="~/WebCamjs/webcam.js"></script>
-    <script src="~/js/CamScript.js"></script>
+    <script>
+        const imageData = localStorage.getItem('ImageData');
+
+        document.getElementById('ImageData').value = imageData;
+    </script>
     <title>Olma | Create User</title>
 </head>
 <body>
@@ -41,6 +44,8 @@
 
             <label for="streetNr">StreetNr:</label>
             <input type="text" id="streetNr" name="streetNr" required>
+
+            <input type="hidden" id="ImageData" name="ImageData" value="">
 
             <input type="checkbox" id="correctAnswer" name="correctAnswer" >
 
