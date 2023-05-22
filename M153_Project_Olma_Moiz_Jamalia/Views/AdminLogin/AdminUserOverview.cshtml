@@ -38,7 +38,7 @@
                                         <tr>
                                             <td>@user.FirstName</td>
                                             <td>@user.LastName</td>
-                                            <td>@user.BirthDate</td>
+                                            <td>@user.BirthDate.ToString("dd.MM.yyyy")</td>
                                             <td>@user.EMail</td>
                                             <td>@user.PhoneNr</td>
                                             <td>@(user.Street + " " + user.StreetNr + ", " + user.PostCode + " " + user.City)</td>
