@@ -1,28 +1,134 @@
-﻿body{
-    background-color:white
+﻿body {
+  background-color: #d2d2d2;
+  font-family: 'Century Gothic'
 }
+
+ 
 
 .center {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
+.form_register {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: [labels] auto [controls] 1fr;
+  grid-auto-flow: row;
+  grid-gap: .15em;
+  background: #eee;
+  padding: 1.2em;
+  border-radius: 20px;
+}
+
+ 
+
+.form_register > label {
+  grid-column: labels;
+  grid-row: auto;
+}
+
+.form-register > input,
+.form-register > textarea,
+.form-register > button {
+  grid-column: controls;
+  grid-row: auto;
+  border: none;
+  padding: 1em;
+}
+
+
 .container-content {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
 }
 
 .nav {
-    background-image: linear-gradient(90deg, aqua, lightblue, #05a7c1);
-    margin:-8px;
-    padding: 10px;
-    
+  background-image: linear-gradient(90deg, aqua, lightblue, #05a7c1);
+  margin:-8px;
+  padding: 10px;
+  height: 100px;
 }
 
-video {
-    border: groove 1em black;
+#captured-image {
+  width: 600px;
+  height: 320px;
+  margin: auto;
+  padding: 10px;
+}
+
+.button-33 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0px 10px 0px;
+}
+
+ 
+
+h1 {
+  font-family: 'Century Gothic'
+}
+
+ 
+
+.button-33:active,
+.button-33:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-33 {
+   font-size: 24px;
+   min-width: 196px;
+  }
+}
+
+.centered-button-33 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }

@@ -13,18 +13,18 @@
 <body id="home_body">
     <div class="nav">
         <form>
-            <a id="loginButton" href="@Url.Action("AdminLogin", "AdminLogin")"><input type="button" name="Login" value="Admin Login" class="button"></a>
-            <a id="prizeScreenButton"><input type="button" name="Login" value="Price List" class="button"></a>
+            <a id="loginButton" href="@Url.Action("AdminLogin", "AdminLogin")"><input type="button" name="Login" value="Admin Login" class="button-33"></a>
+            <a id="prizeScreenButton"><input type="button" name="Login" value="Price List" class="button-33"></a>
         </form>
     </div>
 
     <div id="camera-container" class="container-content">
         <!--<img src="" alt="logo" width="150" class="picture">-->
-        <h1>test</h1>
+        <h1>Take a Selfie</h1>
         <br>
         <div id="camera"></div>
     </div>
-    <button id="capture-btn" type="button" name="CapturePicture">Take a Picture</button>
+    <button id="capture-btn" type="button" name="CapturePicture" class="centered-button-33">Take a Picture</button>
     <div id="form-container" class="container-content" style="display: none;">
         @Html.Partial("CreateUser", new M153_Project_Olma_Moiz_Jamalia.Models.User())
     </div>

@@ -4,9 +4,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
         <title>Olma | Admin page</title>
+        <link rel="stylesheet" href="~/css/styles.css">
     </head>
     <body>
-        <h1>Admin Page</h1>
+        <div class="nav">
+           <a id="loginButton" href="@Url.Action("Home", "HomeScreen")"><input type="button" name="Home" value="Back to Home" class="button-33"></a>
+        </div>
+
+        <div>
+            <h1>Admin-Login</h1>
+            <form>
+                <label>Username: </label>
+                <input type="text" name="username" />
+                <br />
+                <br />
+                <label>Password: </label>
+                <input type="password" name="password" />
+                <br>
+                <br>
+                <input type="submit" value="Confirm" class="button-submit">
+                <br>
+            </form>
+        </div>
     </body>
 </html>
