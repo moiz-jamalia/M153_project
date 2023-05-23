@@ -125,6 +125,20 @@ INSERT INTO prize(name, amount, worth) VALUES
 ('Einkaufsgutschein', 10, 250),
 ('Trostpreis Plüschmaskottchen', 20, 15);
 
+-- -----------------------------------------------------
+-- Table olmadb.quiz & wrongAnswers
+-- -----------------------------------------------------
+
+INSERT INTO quiz (question, correctAnswer) VALUES
+('Who was the famous physicist who developed the theory of relativity?', 'Albert Einstein'),
+('When did the Second World War begin?','1939'),
+('Which country has the largest area in the world?', 'Russia');
+
+INSERT INTO wrongAnswers (FK_QuestionID, wrongAnswer1, wrongAnswer2, wrongAnswer3) VALUES
+(1, 'Isaac Newton', 'Nikola tesla', 'Marie Curie'),
+(2, '1914', '1945', '1941'),
+(3, 'Canada', 'China', 'USA');
+
 -- ------------------------------------------------------
 -- Insert data into table admin
 -- ------------------------------------------------------

@@ -1,0 +1,69 @@
+﻿@model CompetionQuiz
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Olma | Home</title>
+        <link rel="stylesheet" href="~/css/styles.css">
+    </head>
+    <body id="home_body">
+        <div class="nav">
+            <form>
+                <a id="loginButton" href="@Url.Action("AdminLogin", "AdminLogin")"><input type="button" name="Login" value="Admin Login" class="button-33"></a>
+                <a id="prizeScreenButton" href="@Url.Action("PrizeScreenOverview", "PrizeScreen")"><input type="button" name="Login" value="Price List" class="button-33"></a>
+            </form>
+        </div>
+        @if (Model != null)
+        {
+            <h1>@Model.Question</h1>
+            <br />
+            <div>
+                <form method="post" action="@Url.Action("CreateUser", "HomeScreen")">
+                    @Html.AntiForgeryToken()
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="lblAnswer1">@Model.WrongAnswer1</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="RaAnswer1" name="answer" value="@Model.WrongAnswer1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lblAnswer2">@Model.CorrectAnswer</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="RaAnswer2" name="answer" value="@Model.CorrectAnswer" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lblAnswer3">@Model.WrongAnswer2</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="RaAnswer3" name="answer" value="@Model.WrongAnswer2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lblAnswer4">@Model.WrongAnswer3</label>
+                            </td>
+                            <td>
+                                <input type="radio" id="RaAnswer4" name="answer" value="@Model.WrongAnswer3" />
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Submit Answer" />
+                </form>
+            </div>
+        }
+        else
+        {
+            <p>No quiz is available at the moment.</p>
+        }
+    </body>
+</html>
